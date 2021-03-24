@@ -12,12 +12,6 @@ parser.add_argument('-i5', '--payment', type=int)
 args = parser.parse_args()
 arguments = [args.type, args.principal, args.periods, args.interest, args.payment]
 
-if args.interest is None:
-    print('Incorrect parameters')
-
-if len(arguments) < 4:
-    print('Incorrect parameters')
-
 
 def calculate_interest_rate(loan_interest):
     return loan_interest / (12 * 100)
